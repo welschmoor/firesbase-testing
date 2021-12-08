@@ -1,0 +1,16 @@
+{
+  "recipies": [
+    {
+      "title": "PotatoSalad",
+      "cookingTime": "35 minutes"
+    },
+    {
+      "title": "Salad",
+      "cookingTime": "25 minutes"
+    },
+    {
+      "title": "Cheese Cake",
+      "cookingTime": "65 minutes"
+    }
+  ]
+}
