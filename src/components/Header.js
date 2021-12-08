@@ -6,17 +6,17 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom"
 
 const Header = () => {
-  return(
+  return (
     <HeaderDiv>
       <MainNav>
-      <UL>
-        <LI>
-          <NavLink to="/" >Home</NavLink>
-        </LI>
-        <LI>
-          <NavLink to="/about" >About</NavLink>
-        </LI>
-      </UL>
+        <UL>
+          <LI>
+            <NavLink to="/" >Home</NavLink>
+          </LI>
+          <LI>
+            <NavLink to="/about" >About</NavLink>
+          </LI>
+        </UL>
       </MainNav>
     </HeaderDiv>
   )
@@ -24,7 +24,7 @@ const Header = () => {
 
 const HeaderDiv = styled.header`
   height: 80px;
-  background-color: ${p=>p.theme.navCol};
+  background-color: ${p => p.theme.navCol};
   display: flex;
   align-items: center;
 `
@@ -33,12 +33,12 @@ const MainNav = styled.nav`
 
 
 `
-const UL  = styled.ul`
+const UL = styled.ul`
   display: flex;
   align-items: center;
   gap: 25px;
 `
-const LI  = styled.li`
+const LI = styled.li`
   
 `
 

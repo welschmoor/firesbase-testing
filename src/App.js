@@ -5,7 +5,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
 
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
+import Recipe from "./pages/Recipe"
+
+import { createGlobalStyle, ThemeProvider } from "styled-components"
+
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -41,7 +44,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-
+          <Route path="/recipies/:id" element={<Recipe />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
