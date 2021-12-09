@@ -1,10 +1,10 @@
 
-import Header from "./components/Header"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
+import Header from "./components/Header"
 import Home from "./pages/Home"
 import About from "./pages/About"
-
+import Create from "./pages/Create"
 import Recipe from "./pages/Recipe"
 
 import { createGlobalStyle, ThemeProvider } from "styled-components"
@@ -24,11 +24,17 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+
   ul {
     list-style: none;
   }
 
-`
+  .active {
+    border-bottom: 2px solid rgb(50, 150, 160);
+    padding-bottom: 5px;
+  }
+
+`;
 
 const darkTheme = {
   navCol: "lightgrey",
@@ -44,6 +50,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/create" element={<Create />} />
           <Route path="/recipies/:id" element={<Recipe />} />
         </Routes>
       </ThemeProvider>
