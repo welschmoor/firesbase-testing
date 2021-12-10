@@ -31,7 +31,7 @@ const Home = () => {
       setError(error)
       setIsLoading(false)
     })
-  }, [])
+  }, [recipies])
 
 
   // useEffect(() => {

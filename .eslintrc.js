@@ -17,6 +17,7 @@ module.exports = {
       'error',
       'unix'
     ],
-    'eqeqeq': 'error'
+    'eqeqeq': 'error',
+    "no-unused-vars": "off"
   }
 }

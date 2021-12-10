@@ -1,8 +1,14 @@
 
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import { projectFirestore } from "../firebase/config"
 
 const List = ({ recipies }) => {
+
+  const deleteHandler = (id) => {
+    projectFirestore.collection('recipes').doc(id).delete()
+  }
+
   return (
     <Grid>
       {recipies.map(e => {
@@ -10,7 +16,7 @@ const List = ({ recipies }) => {
           <Card key={e.id}>
             <LinkStyled to={`/recipies/${e.id}`}>{e.title}</LinkStyled>
             <p>{e.cookingTime}</p>
-
+            <button onClick={() => deleteHandler(e.id)} >Delete</button>
           </Card>
         )
       })}
